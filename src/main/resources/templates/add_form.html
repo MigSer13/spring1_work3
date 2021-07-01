@@ -13,18 +13,21 @@
 <div class="container">
     <!-- GET [http://localhost:8180/market/   -->
     <form method="post" th:action="@{/add_new_product}">
-        <p>
-            id: <input type="number" name="id">
-        </p>
-        <p>
-            title: <input type="text" name="title">
-        </p>
-        <p>
-            cost: <input type="number" name="cost">
-        </p>
+        <div>
+            <p>
+                <input type="number" name="id" placeholder="enter id">
+            </p>
+            <p>
+                <input type="text" name="title" placeholder="enter title">
+            </p>
+            <p>
+                <input type="number" name="cost" placeholder="enter cost">
+            </p>
+
+        </div>
         <p>
             <button class="btn" type="submit">ADD</button>
-            <h3 th:text="${answer}"></h3>
+        <h3 th:text="${answer}"></h3>
         </p>
     </form>
 </div>
