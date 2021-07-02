@@ -2,6 +2,7 @@ package ru.geekbrains.market.repositories;
 
 import org.springframework.stereotype.Component;
 import ru.geekbrains.market.model.Product;
+import ru.geekbrains.market.services.ProductService;
 
 import javax.annotation.PostConstruct;
 import java.util.ArrayList;

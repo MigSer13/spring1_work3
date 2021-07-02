@@ -17,6 +17,14 @@ public class ProductService {
     }
 
     public String addNewProduct(int id, String title, float cost){
+        if(id == 0 || id < 0){
+            return "id не указан или меньше 0";
+        }else if(title.equals("")){
+            return "title не указан";
+        }else if(cost < 0){
+            return "цена не может быть меньше 0";
+        }
+
         return productRepository.addProduct(id, title, cost);
     }
 
