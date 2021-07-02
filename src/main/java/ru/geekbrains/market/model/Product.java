@@ -1,4 +1,4 @@
-package ru.geekbrains.market;
+package ru.geekbrains.market.model;
 
 import org.springframework.stereotype.Component;
 
@@ -6,12 +6,12 @@ import org.springframework.stereotype.Component;
 public class Product {
     private int id;
     private String title;
-    private long cost;
+    private float cost;
 
     public Product() {
     }
 
-    public Product(int id, String title, long cost) {
+    public Product(int id, String title, float cost) {
         this.id = id;
         this.title = title;
         this.cost = cost;
@@ -23,7 +23,7 @@ public class Product {
     public String getTitle() {
         return title;
     }
-    public long getCost() {
+    public float getCost() {
         return cost;
     }
 
@@ -33,7 +33,7 @@ public class Product {
     public void setTitle(String title) {
         this.title = title;
     }
-    public void setCost(long cost) {
+    public void setCost(float cost) {
         this.cost = cost;
     }
 }

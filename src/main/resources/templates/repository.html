@@ -25,9 +25,13 @@
             <td th:text="${product.id} "></td>
             <td th:text="${product.title} "></td>
             <td th:text="${product.cost} "></td>
+            <td>
+                <a class="btn btn-primary" th:href="@{'/infoProduct/' + ${product.id}}">details</a>
+            </td>
         </tr>
         </tbody>
     </table>
+    <a class="btn btn-primary" th:href="@{/add}">add new product</a>
 </div>
 </body>
 </html>
