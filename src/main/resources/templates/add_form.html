@@ -14,19 +14,19 @@
     <!-- GET [http://localhost:8180/market/   -->
     <form method="post" th:action="@{/add_new_product}">
         <div>
-            <p>
-                <input type="number" name="id" placeholder="enter id">
+            <p align="center">
+                <input type="number" name="id" placeholder="enter id" >
             </p>
-            <p>
-                <input type="text" name="title" placeholder="enter title">
+            <p align="center">
+                <input type="text" name="title" placeholder="enter title" >
             </p>
-            <p>
-                <input type="number" name="cost" placeholder="enter cost">
+            <p align="center">
+                <input type="number" name="cost" placeholder="enter cost" >
             </p>
 
         </div>
-        <p>
-            <button class="btn" type="submit">ADD</button>
+        <p align="center">
+            <button class="btn" type="submit" >ADD</button>
         <h3 th:text="${answer}"></h3>
         </p>
     </form>

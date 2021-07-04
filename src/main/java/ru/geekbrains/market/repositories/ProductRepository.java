@@ -7,6 +7,7 @@ import ru.geekbrains.market.services.ProductService;
 import javax.annotation.PostConstruct;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 @Component
@@ -34,7 +35,7 @@ public class ProductRepository {
     }
 
     public List<Product> getProductList() {
-        return productList;
+        return Collections.unmodifiableList(productList);
     }
 
     public String addProduct(int id, String title, float cost){
