@@ -2,12 +2,16 @@ package ru.geekbrains.market.services;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import ru.geekbrains.market.model.Product;
 import java.util.List;
 
+@Service
 public class ProductDAO {
     private SessionFactory sessionFactory;
 
+    @Autowired
     public ProductDAO(SessionFactory sessionFactory) {
         this.sessionFactory = sessionFactory;
     }
