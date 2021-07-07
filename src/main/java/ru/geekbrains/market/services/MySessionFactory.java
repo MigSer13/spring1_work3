@@ -10,13 +10,10 @@ public class MySessionFactory {
     private SessionFactory sessionFactory;
     private String pathToConfig;
 
-    public MySessionFactory(String pathToConfig) {
+    public MySessionFactory() {
         this.pathToConfig = pathToConfig;
         sessionFactory = new Configuration()
-                .configure(pathToConfig).buildSessionFactory();
-    }
-
-    public MySessionFactory() {
+                .configure("hibernate.cfg.xml").buildSessionFactory();
     }
 
     @Autowired
