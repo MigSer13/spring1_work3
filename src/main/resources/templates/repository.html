@@ -15,9 +15,9 @@
     <table class="table">
         <thead>
         <tr>
-            <td>ID</td>
-            <td>Title</td>
-            <td>Cost</td>
+            <td><b>ID</b></td>
+            <td><b>Title</b></td>
+            <td><b>Cost</b></td>
         </tr>
         </thead>
         <tbody>
@@ -25,9 +25,13 @@
             <td th:text="${product.id} "></td>
             <td th:text="${product.title} "></td>
             <td th:text="${product.cost} "></td>
+            <td>
+                <a class="btn btn-primary" th:href="@{'/infoProduct/' + ${product.id}}">details</a>
+            </td>
         </tr>
         </tbody>
     </table>
+    <a class="btn btn-primary" th:href="@{/add}">add new product</a>
 </div>
 </body>
 </html>

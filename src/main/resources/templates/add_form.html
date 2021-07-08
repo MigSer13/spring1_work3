@@ -13,20 +13,24 @@
 <div class="container">
     <!-- GET [http://localhost:8180/market/   -->
     <form method="post" th:action="@{/add_new_product}">
-        <p>
-            id: <input type="number" name="id">
-        </p>
-        <p>
-            title: <input type="text" name="title">
-        </p>
-        <p>
-            cost: <input type="number" name="cost">
-        </p>
-        <p>
-            <button class="btn" type="submit">ADD</button>
-            <h3 th:text="${answer}"></h3>
+        <div>
+            <p align="center">
+                <input type="number" name="id" placeholder="enter id" >
+            </p>
+            <p align="center">
+                <input type="text" name="title" placeholder="enter title" >
+            </p>
+            <p align="center">
+                <input type="number" name="cost" placeholder="enter cost" >
+            </p>
+
+        </div>
+        <p align="center">
+            <button class="btn" type="submit" >ADD</button>
+        <h3 th:text="${answer}"></h3>
         </p>
     </form>
+    <a th:href="@{/repository}">Go to the list of products</a>
 </div>
 </body>
 </html>
